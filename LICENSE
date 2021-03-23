@@ -1,15 +1,30 @@
 The Mempool Open Source Project
+
 Copyright (c) 2019-2021 The Mempool Open Source Project Developers
 
-This program is free software: you can redistribute it and/or modify it
-under the terms of the GNU Affero General Public License as published by
-the Free Software Foundation, either version 3 of the License, or (at your
-option) any later version.
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License as published by the Free
+Software Foundation, either version 3 of the License, or any later version
+approved by a proxy statement published on <https://mempool.space/about>.
 
-This program is distributed in the hope that it will be useful, but
-WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public
-License for more details.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
 
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+You should have received a copy of the GNU Affero General Public License along
+with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+As an Additional Permission under Section 7 of the GNU AGPLv3, you are not
+required to disclose the Corresponding Source for separate network applications
+that are not part of The Mempool Open Source Project.
+
+As a Supplemental Term under Section 7 of the GNU AGPL v3, if you modify this
+Program, you are required to preserve the text, images, and hyperlinks for
+Appropriate Legal Notices and other attributions displayed on the "About"
+screen of the mempool-frontend web interface, and prominently display a link to
+this content from the "Home" screen of the mempool-frontend web interface.
+
+As a Supplemental Term under Section 7 of the GNU AGPL v3, This License does
+not grant you any rights to use the "mempool.space" trademarks or logos, or any
+other trademarks of Mempool Space K.K.
+
