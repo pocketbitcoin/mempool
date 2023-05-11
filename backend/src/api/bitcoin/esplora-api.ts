@@ -106,6 +106,10 @@ class ElectrsApi implements AbstractBitcoinApi {
     throw new Error('Method getAddress not implemented.');
   }
 
+  $checkAddresses(addresses: string[]): Promise<boolean[]> {
+    throw new Error('Method checkAddresses not implemented.');
+  }
+
   $getAddressTransactions(address: string, txId?: string): Promise<IEsploraApi.Transaction[]> {
     throw new Error('Method getAddressTransactions not implemented.');
   }

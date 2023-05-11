@@ -123,6 +123,7 @@ class BitcoinRoutes {
           .get(config.MEMPOOL.API_URL_PREFIX + 'address/:address/txs', this.getAddressTransactions)
           .get(config.MEMPOOL.API_URL_PREFIX + 'address/:address/txs/chain/:txId', this.getAddressTransactions)
           .get(config.MEMPOOL.API_URL_PREFIX + 'address-prefix/:prefix', this.getAddressPrefix)
+          .post(config.MEMPOOL.API_URL_PREFIX + 'check', this.checkAddresses)
           ;
       }
   }
@@ -553,6 +554,24 @@ class BitcoinRoutes {
 
   private async getAdressTxChain(req: Request, res: Response) {
     res.status(501).send('Not implemented');
+  }
+
+  private async checkAddresses(req: Request, res: Response) {
+    if (config.MEMPOOL.BACKEND === 'none') {
+      res.status(405).send('Address lookups cannot be used with bitcoind as backend.');
+      return;
+    }
+
+    try {
+      const addressData = await bitcoinApi.$checkAddresses(req.body);
+      logger.debug(JSON.stringify(req.body));
+      res.json(addressData);
+    } catch (e) {
+      if (e instanceof Error && e.message.indexOf('exceeds') > 0) {
+        return res.status(413).send(e.message);
+      }
+      res.status(500).send(e instanceof Error ? e.message : e);
+    }
   }
 
   private async getAddressPrefix(req: Request, res: Response) {
